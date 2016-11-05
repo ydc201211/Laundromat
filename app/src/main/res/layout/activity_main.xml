@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/titlebar_blue"
+    tools:context=".activity.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+    <!-- 导入标题栏 -->
+    <include layout="@layout/include_titlebar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"/>
+        <!-- <LinearLayout
+             android:id="@+id/line_fragment"
+             android:layout_width="match_parent"
+             android:layout_weight="1"
+             android:layout_height="0dp"
+             android:layout_gravity="bottom"
+             android:orientation="vertical"
+             android:background="@color/gray_1">
+         </LinearLayout>-->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_2"/>
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/RadioButtonBottomTab"
+            android:checked="true"
+            android:drawableTop="@drawable/rb_home"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rb_order"
+            style="@style/RadioButtonBottomTab"
+            android:drawableTop="@drawable/rb_order"
+            android:text="订单" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/RadioButtonBottomTab"
+            android:drawableTop="@drawable/rb_mine"
+            android:text="我的" />
+
+
+    </RadioGroup>
+        </LinearLayout>
+</LinearLayout>

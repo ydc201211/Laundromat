@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/titlebar_blue"
+    android:fitsSystemWindows="true"
+    tools:context="com.ydc.laundromat.activity.WalletActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <!-- 导入标题栏 -->
+        <include layout="@layout/include_titlebar"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_marginTop="100dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_128dp_wallet"/>
+            <TextView
+                android:id="@+id/account_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26dp"
+                android:text=""
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black_1"/>
+            <Button
+                android:id="@+id/add_money_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="充值"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                android:background="@color/titlebar_blue"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

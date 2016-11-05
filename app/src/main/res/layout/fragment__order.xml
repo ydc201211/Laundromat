@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_1"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/order_swipe_refresh"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <!--<com.ydc.laundromat.swipelistview.SwipeListView
+            android:background="@color/gray_1"
+            android:id="@+id/id_swipelistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            swipe:swipeActionLeft="reveal"
+            swipe:swipeBackView="@+id/order_back"
+            swipe:swipeCloseAllItemsWhenMoveList="true"
+            swipe:swipeFrontView="@+id/order_front"
+            swipe:swipeMode="left"
+            swipe:swipeOffsetLeft="80dip"
+            swipe:swipeOpenOnLongPress="false" />-->
+        <ListView
+            android:id="@+id/order_listview"
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:background="@color/gray_1"
+            android:divider="@color/gray_1"
+            android:dividerHeight="5dp"
+            android:scrollbars="none"
+            android:layout_height="match_parent" >
+        </ListView>
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="无订单数据"
+            android:textColor="@color/gray_3"
+            android:textSize="14sp"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</FrameLayout>
